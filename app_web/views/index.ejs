@@ -1,0 +1,67 @@
+<%- include ('header') -%>
+
+    <div class="container">
+            <a href="/create" class="btn btn-outline-primary mt-4"><i class="fas fa-plus"></i> Agregar nuevo manga</a>
+            <table id="tabla" class="table table-bordered table-striped text-center mt-4">
+                <thead>
+                    <tr class="bg-primary text-white">
+                        <th>ISBN</th>
+                        <th>Título</th>
+                        <th>Autor</th>
+                        <th>Editorial</th>
+                        <th>Idioma</th>
+                        <th>Género</th>
+                        <th>Stock</th>
+                        <th>Precio</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <% modelo.forEach((manga) => { %>
+                        <tr>
+                            <td>
+                                <%=manga.ISBN%>
+                            </td>
+                            <td>
+                                <%=manga.titulo%>
+                            </td>
+                            <td>
+                                <%=manga.autor%>
+                            </td>
+                            <td>
+                                <%=manga.editorial%>
+                            </td>
+                            <td>
+                                <%=manga.idioma%>
+                            </td>
+                            <td>
+                                <%=manga.genero%>
+                            </td>
+                            <td>
+                                <%=manga.stock%>
+                            </td>
+                            <td>
+                                <%=manga.precio%>
+                            </td>
+
+                            <td>
+                                <a href="edit/<%=manga.id_manga%>"><i class="fas fa-edit"></i></a>
+                                <a href="delete/<%=manga.id_manga%>"><i class="fas fa-trash-alt"></i></a>
+                            </td>
+                        </tr>
+                        <% }) %>
+                </tbody> 
+            </table>
+        </div>
+
+<!-- Data Table -->
+<script>
+    $(document).ready(function() {
+    $('#tabla').DataTable({
+        "language": {
+            "url": "https://cdn.datatables.net/plug-ins/1.10.20/i18n/Spanish.json"
+        }
+    });
+} );
+</script>

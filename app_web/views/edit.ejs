@@ -1,0 +1,58 @@
+<%- include ('header') -%>
+
+    <section class="row">
+        <div class="col"></div>
+        <div class="col shadow-lg p-5 mt-3 rounded-3">
+            <h1 class="mb-4">Actualizar registro</h1>
+            <form action="/update" method="post" autocomplete="off">
+                <input type="text" name="id" value="<%= modelo.id_manga %>" hidden>
+                <div class="qty">
+                    <label class="col-form-label col-2" for="stock">Cantidad</label>
+                    <div class="col-7">
+                    <span id="dec" onclick="dec()">-</span>
+                    <input type="text" name="stock" id="qty" value="<%= modelo.stock %>"/>
+                    <span id="inc" onclick="inc()">+</span>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-form-label col-2" for="precio">Precio</label>
+                    <div class="col-7">
+                        <input type="text" name="precio" value="<%= modelo.precio %>">
+                    </div>
+                </div>
+
+                <script type="text/javascript">
+                    /* Incremento del stock */
+                      function inc() {
+                          var qty = document.getElementById('qty').value;
+                          qty++;
+                          if(qty <= 100) {
+                              document.getElementById('qty').value = qty;
+                          }
+                      }
+              
+                      /* Decremento del stock */
+                      function dec() {
+                          var qty = document.getElementById('qty').value;
+                          qty--;
+                          if(qty > 0){
+                              document.getElementById('qty').value = qty;
+                          }
+                      }
+                  </script>
+
+                <div class="form-horizontal mt-2">
+                    <div class="form-group row">
+                        <label class="col-form-label col-2"></label>
+                        <div class="col-10">
+                            <input type="submit" value="Actualizar" class="btn btn-success">
+                            <a class="btn btn-danger" href="/">Cancelar</a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col"></div>
+
+    </section>

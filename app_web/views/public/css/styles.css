@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.banner{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.fa-trash-alt{
+    color: rgb(211, 0, 0);
+    margin-left: 15px;
+}
+
+.btn-outline-primary{
+    margin-bottom: 10px;
+}
+
+.error404 {
+    text-align: center;
+}
+
+.qty {
+    display:flex;
+}
+
+.qty span {
+    background: #ccc;
+    font-weight: 700;
+    padding: 1px 8px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    width: 15px;
+    text-align: center;
+    margin-right: 6px;
+    margin-left: 6px;
+}
+
+.qty input {
+    width: 50px;
+    padding: 0 5px;
+    text-align: center;
+    border: 1px solid #000000;
+}

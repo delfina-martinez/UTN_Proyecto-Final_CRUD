@@ -1,0 +1,78 @@
+<%- include ('header') -%>
+
+<section class="row">
+    <div class="col"></div>
+    <div class="col shadow-lg p-5 mt-3 rounded-3">
+        <h1 class="mb-4">Crear nuevo registro</h1>
+
+        <form action="/save" method="post" autocomplete="off">
+    
+            <div class="form-group row mb-2">
+                <label class="col-form-label col-2" for="ISBN">ISBN</label>
+                <div class="col-6">
+                    <input autofocus class="form-control" name="ISBN" value="<%=modelo.ISBN%>" required>
+                </div>
+            </div>
+    
+            <div class="form-group row mb-2">
+                <label class="col-form-label col-2" for="titulo">Título</label>
+                <div class="col-6">
+                    <input class="form-control" name="titulo" value="<%=modelo.titulo%>" required>
+                </div>
+            </div>
+    
+            <div class="form-group row mb-2">
+                <label class="col-form-label col-2" for="autor">Autor</label>
+                <div class="col-6">
+                    <input class="form-control" name="autor" value="<%=modelo.autor%>" required>
+                </div>
+            </div>
+    
+            <div class="form-group row mb-2">
+                <label class="col-form-label col-2" for="editorial">Editorial</label>
+                <div class="col-6">
+                    <input class="form-control" name="editorial" value="<%=modelo.editorial%>" required>
+                </div>
+            </div>
+    
+            <div class="form-group row mb-2">
+                <label class="col-form-label col-2" for="idioma">Idioma</label>
+                <div class="col-6">
+                    <input class="form-control" name="idioma" value="<%=modelo.idioma%>" required>
+                </div>
+            </div>
+    
+            <div class="form-group row mb-2">
+                <label class="col-form-label col-2" for="genero">Género</label>
+                <div class="col-6">
+                    <input class="form-control" name="genero" value="<%=modelo.genero%>" required>
+                </div>
+            </div>
+    
+            <div class="form-group row mb-2">
+                <label class="col-form-label col-2" for="stock">Cantidad</label>
+                <div class="col-6">
+                    <input class="form-control" name="stock" value="<%=modelo.stock%>" required>
+                </div>
+            </div>
+    
+            <div class="form-group row mb-2">
+                <label class="col-form-label col-2" for="precio">Precio</label>
+                <div class="col-6">
+                    <input class="form-control" name="precio" value="<%=modelo.precio%>" required>
+                </div>
+            </div>
+    
+            <div class="form-horizontal mt-3">
+                <div class="form-group row">
+                    <label class="col-form-label col-2"></label>
+                    <div class="col-10">
+                        <input type="submit" value="Crear registro" class="btn btn-success">
+                        <a class="btn btn-danger" href="/">Cancelar</a>
+                    </div>
+                </div>
+            </div>
+        </form></div>
+    <div class="col"></div>
+    
+</section>

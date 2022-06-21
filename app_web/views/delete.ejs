@@ -1,0 +1,79 @@
+<%- include ('header') -%>
+
+<section class="row">
+    <div class="col"></div>
+    <div class="col shadow-lg p-5 mt-3 rounded-3">
+    <h1 class="mb-4">Eliminar registro</h1>
+
+    <form action="/delete/" method="post">
+        <input type="text" name="id" value="<%= modelo.id_manga %>" hidden>
+
+        <div class="form-group row mb-2">
+            <label class="col-form-label col-2" for="ISBN">ISBN</label>
+            <div class="col-6">
+                <input readonly class="form-control" name="ISBN" value="<%=modelo.ISBN%>">
+            </div>
+        </div>
+
+        <div class="form-group row mb-2">
+            <label class="col-form-label col-2" for="titulo">Título</label>
+            <div class="col-6">
+                <input readonly class="form-control" name="titulo" value="<%=modelo.titulo%>">
+            </div>
+        </div>
+
+        <div class="form-group row mb-2">
+            <label class="col-form-label col-2" for="autor">Autor</label>
+            <div class="col-6">
+                <input readonly class="form-control" name="autor" value="<%=modelo.autor%>">
+            </div>
+        </div>
+
+        <div class="form-group row mb-2">
+            <label class="col-form-label col-2" for="editorial">Editorial</label>
+            <div class="col-6">
+                <input readonly class="form-control" name="editorial" value="<%=modelo.editorial%>">
+            </div>
+        </div>
+
+        <div class="form-group row mb-2">
+            <label class="col-form-label col-2" for="idioma">Idioma</label>
+            <div class="col-6">
+                <input readonly class="form-control" name="idioma" value="<%=modelo.idioma%>">
+            </div>
+        </div>
+
+        <div class="form-group row mb-2">
+            <label class="col-form-label col-2" for="genero">Género</label>
+            <div class="col-6">
+                <input readonly class="form-control" name="genero" value="<%=modelo.genero%>">
+            </div>
+        </div>
+
+        <div class="form-group row mb-3">
+            <label class="col-form-label col-2" for="stock">Cantidad</label>
+            <div class="col-6">
+                <input readonly class="form-control" name="stock" value="<%=modelo.stock%>">
+            </div>
+        </div>
+
+        <div class="form-group row mb-3">
+            <label class="col-form-label col-2" for="precio">Precio</label>
+            <div class="col-6">
+                <input readonly class="form-control" name="precio" value="<%=modelo.precio%>">
+            </div>
+        </div>
+
+        <div class="form-horizontal">
+            <div class="form-group row">
+                <label class="col-form-label col-2"></label>
+                <div class="col-sm-10">
+                    <input type="submit" value="Eliminar" class="btn btn-danger">
+                    <a class="btn btn-secondary" href="/">Cancelar</a>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+    <div class="col"></div>
+</section>
